@@ -47,7 +47,9 @@ def test_with_pydantic_v1(monkeypatch, tmp_path):
     monkeypatch.setattr(_pydantic, "pydantic", pydantic_v1)
 
     class LegacyModel(pydantic_v1.BaseModel):
-        name: str = pydantic_v1.Field(default="Jane Doe", description="legacy description")
+        name: str = pydantic_v1.Field(
+            default="Jane Doe", description="legacy description"
+        )
 
     assert _pydantic.is_pydantic_model(LegacyModel)
     assert _pydantic.get_field_docstring(LegacyModel, "name") == "legacy description"
