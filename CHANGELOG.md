@@ -4,6 +4,7 @@
 
 ## Unreleased: pdoc next
 
+- Fix a crash when documenting Pydantic v1 models, and show their field descriptions and defaults.
 - Fix incorrect ordering of `start-after`/`end-before` in RST include directives.
   ([#876](https://github.com/mitmproxy/pdoc/pull/876), @JohanKarlbergg)
 - Support Pydantic [`computed_field`](https://docs.pydantic.dev/2.0/usage/computed_fields/) descriptions ([#855](https://github.com/mitmproxy/pdoc/pull/855), @avhz)
